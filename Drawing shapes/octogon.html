@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>CSS Heart</title>
+    <meta charset="utf-8">
+    <style>
+        .container{
+            position: absolute;
+            left: 50%; 
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+        .oct {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            
+        }
+        .oct::before{
+            content: "";
+            height: 0;
+            width: 80px;
+            position: absolute;
+            border-bottom: 60px solid red;
+            border-right: 60px solid white;
+            border-left: 60px solid white;
+        }
+        .oct::after{
+            content:"";
+            height: 0;
+            width: 80px;
+            position: absolute;
+            border-top: 60px solid red;
+            border-left: 60px solid white;
+            border-right: 60px solid white;
+            margin: 140px 0 0 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="oct"></div>
+    </div>
+    
+</body>
+</html>
